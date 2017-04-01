@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^$ web/
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ web/$1
+
+DirectoryIndex index.php
+Options -Indexes
+AddDefaultCharset utf-8
+php_flag display_errors on
